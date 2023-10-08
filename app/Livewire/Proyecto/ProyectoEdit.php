@@ -6,6 +6,11 @@ use Livewire\Component;
 
 class ProyectoEdit extends Component
 {
+    public function mount()
+    {
+        $this->layout = null;
+    }
+    
     public function render()
     {
         return view('livewire.proyecto.proyecto-edit');
