@@ -1,18 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Proyecto\ProyectoIndex;
+use App\Livewire\Proyecto\ProyectoCreate;
+use App\Livewire\Proyecto\ProyectoEdit;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ProyectoIndex::class)->name('proyecto.index');
+Route::get('/proyecto/create', ProyectoCreate::class)->name('proyecto.create');
+Route::get('/proyecto/{proyecto}/edit', ProyectoEdit::class)->name('proyecto.edit');
