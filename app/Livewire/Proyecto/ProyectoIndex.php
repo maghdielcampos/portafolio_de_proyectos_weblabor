@@ -8,6 +8,8 @@ use Livewire\Component;
 
 class ProyectoIndex extends Component
 {
+    public $proyectos;
+
     public function mount()
     {
         $this->layout = null;
@@ -15,8 +17,8 @@ class ProyectoIndex extends Component
 
     public function render()
     {
-        $proyectos = Proyecto::all();
+        $this->proyectos = Proyecto::all();
 
-        return view('livewire.proyecto.proyecto-index', ['proyectos' => $proyectos]);
+        return view('livewire.proyecto.proyecto-index');
     }
 }
