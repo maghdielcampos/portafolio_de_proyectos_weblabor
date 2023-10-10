@@ -1,0 +1,27 @@
+/* resources/css/app.css */
+
+/* Estilos para los cuadros */
+.project-list {
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    color: #555;
+}
+
+.project-image {
+    width: 100%;
+    margin-top: 1rem;
+}
