@@ -21,4 +21,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/projects/create', ProjectCreate::class)->name('admin.projects.create');
     Route::get('/admin/projects/{project}/edit', ProjectEdit::class)->name('admin.projects.edit');
     Route::get('/admin/projects/{project}/delete', ProjectDelete::class)->name('admin.projects.delete');
+
+    Route::post('/admin/projects', [ProjectCreate::class, 'createProject'])->name('admin.projects.store');
 });
