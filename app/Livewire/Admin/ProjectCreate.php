@@ -18,7 +18,7 @@ class ProjectCreate extends Component
     public function createProject()
     {
         // Validación después de definir $imagenPath
-        // dd($this->titulo, $this->descripcion, $this->imagen);
+        dd($this->titulo, $this->descripcion, $this->imagen);
         $this->validate([
             'titulo' => 'required',
             'descripcion' => 'required',

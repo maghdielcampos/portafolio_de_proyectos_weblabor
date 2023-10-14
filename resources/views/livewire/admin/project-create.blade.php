@@ -8,8 +8,8 @@
                     <div class="card-header">{{ __('Crear un nuevo proyecto') }}</div>
                     <div class="card-body">
                         
-                        <form wire:submit.prevent="createProject" enctype="multipart/form-data">
-                            
+                        <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
+                            @csrf
 
                             <div class="form-group">
                                 <label for="titulo">Título</label>
